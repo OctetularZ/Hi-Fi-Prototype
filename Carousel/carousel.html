@@ -14,9 +14,9 @@
 
 <body>
   <div class="carousel-container">
-    <i onmouseover="arrowTransitionOn(this)" onmouseout="arrowTransitionOut(this)"
+    <i onmouseover="arrowTransitionOn(this)" onmouseout="arrowTransitionOut(this)" onclick="goBack(this)"
       class="bi bi-arrow-down-circle-fill arrow arrow-left"></i>
-    <div class="carousel">
+    <div class="carousel c1">
       <img class="img1" src="/assets/images/location1.jpg" width="560" height="250" />
       <div class="carousel-desc">
         <a href="https://google.com"><button class="visit-btn">Visit</button></a>
@@ -32,10 +32,10 @@
       </div>
     </div>
 
-    <i onmouseover="arrowTransitionOn(this)" onmouseout="arrowTransitionOut(this)"
+    <i onmouseover="arrowTransitionOn(this)" onmouseout="arrowTransitionOut(this)" onclick="goForward(this)"
       class="bi bi-arrow-down-circle-fill arrow arrow-right"></i>
 
-    <div class="carousel">
+    <div class="carousel c2">
       <img class="img1" src="/assets/images/location1.jpg" width="560" height="250" />
       <div class="carousel-desc">
         <a href="https://google.com"><button class="visit-btn">Visit</button></a>
@@ -52,6 +52,8 @@
     </div>
   </div>
   <script src="carousel.js" async defer></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
