@@ -7,7 +7,6 @@ Black - black
 
 html {
   font-family: Poppins;
-  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
@@ -25,7 +24,8 @@ button {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-left: 18rem;
+  margin-left: 27rem;
+  overflow-x: hidden;
 }
 
 .arrow {

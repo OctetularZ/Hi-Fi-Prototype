@@ -8,7 +8,15 @@ function arrowTransitionOut(arrow) {
   arrow.classList.add("bi-arrow-down-circle-fill")
 }
 
-function goForward(arrow) {
-  let sl = document.getElementById("lp")
-  $('lp').scrollRight(400);
-}
+gsap.registerPlugin(ScrollTrigger)
+
+const contents = gsap.utils.toArray(".carousel");
+
+gsap.to(contents, {
+  xPercent: -100 * (contents.length - 1),
+  scrollTrigger: {
+    trigger: ".carousel-container",
+    pin: true,
+    scrub: 1
+  }
+})
