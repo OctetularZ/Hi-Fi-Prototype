@@ -13,7 +13,7 @@ gsap.registerPlugin(ScrollTrigger)
 const contents = gsap.utils.toArray(".carousel");
 
 gsap.to(contents, {
-  xPercent: -100 * (contents.length - 1),
+  xPercent: -140 * (contents.length - 1),
   scrollTrigger: {
     trigger: ".carousel-container",
     pin: true,
