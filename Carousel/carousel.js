@@ -1,13 +1,3 @@
-function arrowTransitionOn(arrow) {
-  arrow.classList.remove("bi-arrow-down-circle-fill")
-  arrow.classList.add("bi-arrow-down-circle")
-}
-
-function arrowTransitionOut(arrow) {
-  arrow.classList.remove("bi-arrow-down-circle")
-  arrow.classList.add("bi-arrow-down-circle-fill")
-}
-
 gsap.registerPlugin(ScrollTrigger)
 
 const contents = gsap.utils.toArray(".carousel");
@@ -20,3 +10,24 @@ gsap.to(contents, {
     scrub: 1
   }
 })
+
+const nav = document.querySelector('.nav-links')
+const openNavBtn = document.querySelector('#nav-toggle-open')
+const closeNavBtn = document.querySelector('#nav-toggle-close')
+
+const openNav = () => {
+  nav.style.display = 'flex';
+  openNavBtn.style.display = 'none';
+  closeNavBtn.style.display = 'inline-block';
+}
+
+openNavBtn.addEventListener('click', openNav)
+
+
+const closeNav = () => {
+  nav.style.display = 'none';
+  openNavBtn.style.display = 'inline-block';
+  closeNavBtn.style.display = 'none';
+}
+
+closeNavBtn.addEventListener('click', closeNav)

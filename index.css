@@ -1,0 +1,118 @@
+/* 
+Colours:
+Red - #F22F2F
+White - white
+Black - black
+*/
+
+:root {
+  --container-width-lg: 80%;
+  --container-width-md: 92%;
+}
+
+
+html {
+  font-family: Poppins;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+nav,
+nav::before,
+nav::after {
+  list-style: none;
+  text-decoration: none;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav {
+  background: white;
+  width: 100vw;
+  height: 4rem;
+  display: grid;
+  place-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+nav .nav-container {
+  width: var(--container-width-lg);
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-toggle-btn {
+  display: none;
+}
+
+.nav-logo {
+  font-size: 40px;
+  font-weight: 600;
+  display: grid;
+  place-items: center;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 4.5rem;
+  height: 100%;
+}
+
+.nav-links li {
+  height: 100%;
+}
+
+nav a {
+  color: black;
+}
+
+.nav-links li a {
+  font-weight: 400;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  transition: color 0.4s ease;
+  position: relative;
+}
+
+.nav-links li a.active::after {
+  content: '';
+  display: block;
+  background: red;
+  height: 5px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.nav-links li a:hover {
+  color: red;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
