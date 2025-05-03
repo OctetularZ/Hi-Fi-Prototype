@@ -211,7 +211,6 @@ button {
 @media screen and (max-width: 1200px) {
   .carousel-container {
     gap: 20rem;
-    left: 28%;
   }
 }
 
