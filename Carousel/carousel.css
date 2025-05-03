@@ -43,11 +43,10 @@ nav {
   height: 4rem;
   display: grid;
   place-items: center;
-  position: fixed;
   top: 0;
   left: 0;
   z-index: 2;
-  box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 nav .nav-container {
@@ -125,6 +124,7 @@ button {
   align-items: center;
   gap: 15rem;
   width: 100%;
+  margin-top: 5rem;
 }
 
 .img1 {
@@ -209,12 +209,13 @@ button {
 
   .nav-links {
     position: absolute;
-    top: 100%;
+    top: 75%;
     right: 0;
     flex-direction: column;
     gap: 0;
     align-items: flex-start;
     display: none;
+    z-index: 2;
   }
 
   .nav-links li {
