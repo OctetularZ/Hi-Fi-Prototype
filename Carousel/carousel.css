@@ -310,3 +310,14 @@ button {
     gap: 7rem;
   }
 }
+
+@media screen and (max-width: 850px) {
+  .carousel-container {
+    flex-direction: column;
+    left: 40%;
+  }
+
+  .carousel {
+    max-width: 30rem;
+  }
+}
