@@ -55,3 +55,14 @@ function tablet(x) {
 tablet(tabletScreen);
 
 tabletScreen.addEventListener("change", tablet);
+
+
+const carouselText = document.getElementById('carousel-text');
+const toggleBtn = document.getElementById('text-toggle-btn');
+
+toggleBtn.addEventListener('click', () => {
+  carouselText.classList.toggle('expanded');
+  toggleBtn.textContent = carouselText.classList.contains('expanded') ?
+    "Show Less" :
+    "Discover More";
+})

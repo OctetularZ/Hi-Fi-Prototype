@@ -182,6 +182,27 @@ button {
   align-items: center;
 }
 
+.text-container {
+  align-items: center;
+  position: relative;
+  justify-content: center;
+  max-width: 80%;
+}
+
+#carousel-text {
+  max-height: 145px;
+  overflow: hidden;
+  position: relative;
+  transition: max-height 0.3s ease;
+}
+
+#carousel-text.expanded {
+  max-height: 160px;
+  overflow-y: scroll;
+  scrollbar-width: auto;
+  padding-right: 10px;
+}
+
 .middle-desc h3 {
   margin-top: -25px;
 }
@@ -189,7 +210,6 @@ button {
 .middle-desc p {
   margin-top: -10px;
   text-align: center;
-  max-width: 80%;
 }
 
 .discover-more {
