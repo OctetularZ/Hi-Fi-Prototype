@@ -314,10 +314,39 @@ button {
 @media screen and (max-width: 850px) {
   .carousel-container {
     flex-direction: column;
-    left: 40%;
   }
 
   .carousel {
     max-width: 30rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .carousel {
+    max-width: 25rem;
+    min-width: 25rem;
+  }
+
+  .middle-desc {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .carousel {
+    max-width: 20rem;
+    min-width: 20rem;
+  }
+
+  .middle-desc h1 {
+    max-width: 18rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .carousel {
+    max-width: 18rem;
+    min-width: 18rem;
   }
 }

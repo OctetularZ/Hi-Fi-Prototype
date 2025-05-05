@@ -1,6 +1,7 @@
 gsap.registerPlugin(ScrollTrigger)
 
 const contents = gsap.utils.toArray(".carousel");
+let scrollAnim;
 
 const nav = document.querySelector('.nav-links')
 const openNavBtn = document.querySelector('#nav-toggle-open')
@@ -24,30 +25,33 @@ const closeNav = () => {
 closeNavBtn.addEventListener('click', closeNav)
 
 
+const tabletScreen = window.matchMedia("(max-width: 850px)");
+
 function tablet(x) {
   carouselContainter = document.querySelector('.carousel-container')
-  if (x.matches) {
-    gsap.to(contents, {
-      scrollTrigger: {
-        trigger: ".carousel-container",
-        pin: true,
-        scrub: 1
-      }
-    })
+  if (!x.matches) {
+    if (!scrollAnim) {
+      scrollAnim = gsap.to(contents, {
+        xPercent: -140 * (contents.length - 1),
+        scrollTrigger: {
+          trigger: ".carousel-container",
+          pin: true,
+          scrub: 1
+        }
+      });
+    }
   } else {
-    gsap.to(contents, {
-      xPercent: -140 * (contents.length - 1),
-      scrollTrigger: {
-        trigger: ".carousel-container",
-        pin: true,
-        scrub: 1
-      }
-    })
+    if (scrollAnim) {
+      scrollAnim.scrollTrigger.kill(); // kill ScrollTrigger
+      scrollAnim.kill(); // kill GSAP animation
+      scrollAnim = null; // reset the reference
+      gsap.set(contents, {
+        clearProps: "all"
+      }); // remove inline styles
+    }
   }
 }
 
-var tabletSize = window.matchMedia("(max-width: 850px)")
+tablet(tabletScreen);
 
-tabletSize.addEventListener("change", function () {
-
-})
+tabletScreen.addEventListener("change", tablet);
