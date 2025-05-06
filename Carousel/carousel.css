@@ -241,6 +241,8 @@ button {
   display: flex;
   flex-direction: column;
   transition: opacity 0.2s ease;
+  align-items: center;
+  pointer-events: none;
 }
 
 #close-overlay-btn {
@@ -265,6 +267,15 @@ button {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   border-bottom: 1px solid black;
+}
+
+.overlay-text {
+  width: 90%;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 

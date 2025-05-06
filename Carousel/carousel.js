@@ -39,12 +39,14 @@ const closeOverlayBtn = document.querySelector('#close-overlay-btn')
 
 const openOverlay = () => {
   mapOverlay.style.opacity = '1';
+  mapOverlay.style.pointerEvents = 'auto';
 }
 
 visitBtn.addEventListener('click', openOverlay);
 
 const closeOverlay = () => {
   mapOverlay.style.opacity = '0';
+  mapOverlay.style.pointerEvents = 'none';
 }
 
 closeOverlayBtn.addEventListener('click', closeOverlay);
