@@ -1,11 +1,17 @@
+// Registering GSAP plugin
+
 gsap.registerPlugin(ScrollTrigger)
 
 const contents = gsap.utils.toArray(".carousel");
 let scrollAnim;
 
+
+// Navigation menu
+
 const nav = document.querySelector('.nav-links')
 const openNavBtn = document.querySelector('#nav-toggle-open')
 const closeNavBtn = document.querySelector('#nav-toggle-close')
+
 
 const openNav = () => {
   nav.style.display = 'flex';
@@ -24,6 +30,27 @@ const closeNav = () => {
 
 closeNavBtn.addEventListener('click', closeNav)
 
+
+// Map overlay
+
+const mapOverlay = document.querySelector('#map-overlay')
+const visitBtn = document.querySelector('#visit-btn')
+const closeOverlayBtn = document.querySelector('#close-overlay-btn')
+
+const openOverlay = () => {
+  mapOverlay.style.display = 'block';
+}
+
+visitBtn.addEventListener('click', openOverlay);
+
+const closeOverlay = () => {
+  mapOverlay.style.display = 'none';
+}
+
+closeOverlayBtn.addEventListener('click', closeOverlay);
+
+
+// Media queries
 
 const tabletScreen = window.matchMedia("(max-width: 850px)");
 

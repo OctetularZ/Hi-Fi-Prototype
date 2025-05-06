@@ -233,6 +233,7 @@ button {
   left: 50%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   border: 1px solid black;
+  display: none;
   transform: translate(-50%, -50%);
   position: absolute;
   z-index: 2;
