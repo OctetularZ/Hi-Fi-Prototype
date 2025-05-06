@@ -233,10 +233,18 @@ button {
   left: 50%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   border: 1px solid black;
-  display: none;
+  opacity: 0;
   transform: translate(-50%, -50%);
   position: absolute;
   z-index: 2;
+  transition: opacity 0.2s ease;
+}
+
+#close-overlay-btn {
+  background: none;
+  border: none;
+  color: red;
+  font-size: 25px;
 }
 
 
