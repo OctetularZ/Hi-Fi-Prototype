@@ -88,6 +88,8 @@ tablet(tabletScreen);
 tabletScreen.addEventListener("change", tablet);
 
 
+// Making carousel discover more scrollable div feature
+
 const carousels = document.querySelectorAll('.carousel');
 
 carousels.forEach(carousel => {
