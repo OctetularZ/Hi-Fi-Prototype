@@ -1,6 +1,9 @@
+// Navigation menu
+
 const nav = document.querySelector('.nav-links')
 const openNavBtn = document.querySelector('#nav-toggle-open')
 const closeNavBtn = document.querySelector('#nav-toggle-close')
+
 
 const openNav = () => {
   nav.style.display = 'flex';
