@@ -228,7 +228,7 @@ button {
 .map-overlay {
   background-color: white;
   border-radius: 20px;
-  height: 500px;
+  height: 450px;
   width: 400px;
   top: 50%;
   left: 50%;
@@ -405,6 +405,11 @@ button {
     align-items: center;
     text-align: center;
   }
+
+  .map-overlay {
+    width: 300px;
+    height: 400px;
+  }
 }
 
 @media screen and (max-width: 450px) {
@@ -416,11 +421,21 @@ button {
   .middle-desc h1 {
     max-width: 18rem;
   }
+
+  .map-overlay {
+    width: 275px;
+    height: 375px;
+  }
 }
 
 @media screen and (max-width: 360px) {
   .carousel {
     max-width: 18rem;
     min-width: 18rem;
+  }
+
+  .map-overlay {
+    width: 250px;
+    height: 350px;
   }
 }
