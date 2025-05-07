@@ -33,23 +33,25 @@ closeNavBtn.addEventListener('click', closeNav)
 
 // Map overlay
 
-const mapOverlay = document.querySelector('#map-overlay')
-const visitBtn = document.querySelector('#visit-btn')
-const closeOverlayBtn = document.querySelector('#close-overlay-btn')
+const mapOverlays = document.querySelectorAll('.map-overlay');
+const visitBtns = document.querySelectorAll('.visit-btn');
+const closeOverlayBtns = document.querySelectorAll('.close-overlay-btn');
 
-const openOverlay = () => {
-  mapOverlay.style.opacity = '1';
-  mapOverlay.style.pointerEvents = 'auto';
-}
+visitBtns.forEach((btn, index) => {
+  btn.addEventListener('click', () => {
+    const overlay = mapOverlays[index];
+    overlay.style.opacity = '1';
+    overlay.style.pointerEvents = 'auto';
+  });
+});
 
-visitBtn.addEventListener('click', openOverlay);
-
-const closeOverlay = () => {
-  mapOverlay.style.opacity = '0';
-  mapOverlay.style.pointerEvents = 'none';
-}
-
-closeOverlayBtn.addEventListener('click', closeOverlay);
+closeOverlayBtns.forEach((btn, index) => {
+  btn.addEventListener('click', () => {
+    const overlay = mapOverlays[index];
+    overlay.style.opacity = '0';
+    overlay.style.pointerEvents = 'none';
+  });
+});
 
 
 // Media queries
@@ -86,12 +88,16 @@ tablet(tabletScreen);
 tabletScreen.addEventListener("change", tablet);
 
 
-const carouselText = document.getElementById('carousel-text');
-const toggleBtn = document.getElementById('text-toggle-btn');
+const carousels = document.querySelectorAll('.carousel');
 
-toggleBtn.addEventListener('click', () => {
-  carouselText.classList.toggle('expanded');
-  toggleBtn.textContent = carouselText.classList.contains('expanded') ?
-    "Show Less" :
-    "Discover More";
-})
+carousels.forEach(carousel => {
+  const carouselText = carousel.querySelector('.carousel-text');
+  const toggleBtn = carousel.querySelector('.text-toggle-btn');
+
+  toggleBtn.addEventListener('click', () => {
+    carouselText.classList.toggle('expanded');
+    toggleBtn.textContent = carouselText.classList.contains('expanded') ?
+      "Show Less" :
+      "Discover More";
+  });
+});

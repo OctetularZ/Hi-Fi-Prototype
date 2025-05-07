@@ -190,14 +190,14 @@ button {
   max-width: 80%;
 }
 
-#carousel-text {
+.carousel-text {
   max-height: 145px;
   overflow: hidden;
   position: relative;
   transition: max-height 0.3s ease;
 }
 
-#carousel-text.expanded {
+.carousel-text.expanded {
   max-height: 160px;
   overflow-y: scroll;
   scrollbar-width: auto;
@@ -245,7 +245,7 @@ button {
   pointer-events: none;
 }
 
-#close-overlay-btn {
+.close-overlay-btn {
   background: none;
   border: none;
   color: red;
@@ -258,7 +258,7 @@ button {
   transition: all 0.3s ease;
 }
 
-#close-overlay-btn:hover {
+.close-overlay-btn:hover {
   color: rgb(254, 148, 148);
 }
 
