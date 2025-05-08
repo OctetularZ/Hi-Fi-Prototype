@@ -41,6 +41,7 @@ nav {
   place-items: center;
   top: 0;
   left: 0;
+  position: relative;
   z-index: 2;
   box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
 }
