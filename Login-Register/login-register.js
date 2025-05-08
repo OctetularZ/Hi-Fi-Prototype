@@ -21,3 +21,11 @@ const closeNav = () => {
 }
 
 closeNavBtn.addEventListener('click', closeNav)
+
+
+
+// Login & Register
+
+const container = document.querySelector('form-container');
+const registerBtn = document.querySelector('.register-btn');
+const loginBtn = document.querySelector('.login-btn');
