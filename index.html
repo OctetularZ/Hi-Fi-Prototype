@@ -9,8 +9,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="index.css">
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
@@ -38,169 +36,58 @@
     </div>
   </div>
 
-  <div style="background-color: #fff;">
-    <section class=" discover" id="discover">
-      <div class="discover-container">
-        <div class="section-title">
-          <h2>Discover</h2>
-          <p>See what Bristol has to offer</p>
-        </div>
-
-        <ul class="cards flex">
-          <li class="card">
-            <img src="/assets/images/Bristol-1.webp" alt="discoverImg" />
-            <h3>Bristol City Centre</h3>
-            <p>Bustling with shops, cafés, street performers, and historic buildings, Bristol’s city centre is the
-              beating
-              heart of the city.</p>
-          </li>
-
-          <li class="card">
-            <img src="/assets/images/Bristol-2.webp" alt="discoverImg" />
-            <h3>Distinctive Local Areas</h3>
-            <p>From the bohemian charm of Stokes Croft to the elegance of Clifton and the vibrant community of
-              Bedminster,
-              Bristol’s neighborhoods each offer a unique vibe.</p>
-          </li>
-
-          <li class="card">
-            <img src="/assets/images/Bristol-3.jpg" alt="discoverImg" />
-            <h3>Clifton Suspension Bridge</h3>
-            <p>Marvel at Brunel's engineering masterpiece spanning the Avon Gorge. A symbol of the city, the bridge
-              offers
-              stunning views and photo ops.</p>
-          </li>
-
-          <li class="card">
-            <img src="/assets/images/Bristol-4.jpg" alt="discoverImg" />
-            <h3>University of Bristol</h3>
-            <p>A world-renowned institution at the heart of the city, the University of Bristol blends academic
-              excellence
-              with historic architecture.</p>
-          </li>
-
-          <li class="card">
-            <img src="/assets/images/Bristol-5.jpg" alt="discoverImg" />
-            <h3>Rich Maritime History</h3>
-            <p>Dive into Bristol’s role in trade, exploration, and innovation. Visit M Shed and the old docks to trace
-              the
-              city’s deep-rooted nautical legacy.</p>
-          </li>
-
-          <li class="card">
-            <img src="/assets/images/Bristol-6.jpg" alt="discoverImg" />
-            <h3>Street Art & Creativity</h3>
-            <p>Home of Banksy and vibrant murals, Bristol’s streets are a canvas of bold expression. Take a walk through
-              Stokes Croft and experience urban creativity.</p>
-          </li>
-        </ul>
+  <section class="discover" id="discover">
+    <div class="discover-container">
+      <div class="section-title">
+        <h2>Discover</h2>
+        <p>See what Bristol has to offer</p>
       </div>
-    </section>
-  </div>
 
-  <div class="carousel-container">
-    <div class="carousel c1">
-      <div class="map-overlay">
-        <button class="close-overlay-btn"><i class="bi bi-x-square-fill"></i></button>
-        <img src="/assets/images/clifton-suspension-bridge-map.jpg" class="map-overlay-img" />
-        <div class="overlay-text">
-          <h1 style="margin-top: 15px; line-height: 100%; font-size: 25px;">Visit Clifton Suspension Bridge:</h1>
-          <p style="margin-top: -5px;">
-            Street: Clifton Rd <br>
-            City: Bristol <br>
-            Country: United Kingdom <br>
-            Postcode: BR6 92K
-          </p>
-        </div>
-      </div>
-      <img class="carousel-img" src="/assets/images/location1.jpg" />
-      <div class="carousel-desc">
-        <a><button class="visit-btn">Visit</button></a>
-        <div class="middle-desc">
-          <h1>Founding of Frank Stone</h1>
-          <h3>1963</h3>
-          <div class="text-container">
-            <p class="carousel-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel lacinia nibh.
-              Etiam
-              at suscipit magna.
-              Phasellus at efficitur arcu, id accumsan nulla. Donec at nunc consequat, viverra sapien eu, elementum
-              arcu.
-              Maecenas ultrices ipsum sit amet libero dignissim aliquam. Etiam et feugiat urna. Phasellus quis leo sed
-              enim posuere eleifend ac in est. In dictum arcu sem, eget elementum felis consectetur sed.</p>
-          </div>
-          <a><button class="discover-more text-toggle-btn">Discover More</button></a>
-        </div>
-      </div>
+      <ul class="cards flex">
+        <li class="card">
+          <img src="/assets/images/Bristol-1.webp" alt="discoverImg" />
+          <h3>Bristol City Centre</h3>
+          <p>Bustling with shops, cafés, street performers, and historic buildings, Bristol’s city centre is the beating
+            heart of the city.</p>
+        </li>
+
+        <li class="card">
+          <img src="/assets/images/Bristol-2.webp" alt="discoverImg" />
+          <h3>Distinctive Local Areas</h3>
+          <p>From the bohemian charm of Stokes Croft to the elegance of Clifton and the vibrant community of Bedminster,
+            Bristol’s neighborhoods each offer a unique vibe.</p>
+        </li>
+
+        <li class="card">
+          <img src="/assets/images/Bristol-3.jpg" alt="discoverImg" />
+          <h3>Clifton Suspension Bridge</h3>
+          <p>Marvel at Brunel's engineering masterpiece spanning the Avon Gorge. A symbol of the city, the bridge offers
+            stunning views and photo ops.</p>
+        </li>
+
+        <li class="card">
+          <img src="/assets/images/Bristol-4.jpg" alt="discoverImg" />
+          <h3>University of Bristol</h3>
+          <p>A world-renowned institution at the heart of the city, the University of Bristol blends academic excellence
+            with historic architecture.</p>
+        </li>
+
+        <li class="card">
+          <img src="/assets/images/Bristol-5.jpg" alt="discoverImg" />
+          <h3>Rich Maritime History</h3>
+          <p>Dive into Bristol’s role in trade, exploration, and innovation. Visit M Shed and the old docks to trace the
+            city’s deep-rooted nautical legacy.</p>
+        </li>
+
+        <li class="card">
+          <img src="/assets/images/Bristol-6.jpg" alt="discoverImg" />
+          <h3>Street Art & Creativity</h3>
+          <p>Home of Banksy and vibrant murals, Bristol’s streets are a canvas of bold expression. Take a walk through
+            Stokes Croft and experience urban creativity.</p>
+        </li>
+      </ul>
     </div>
-
-    <div class="carousel c2">
-      <div class="map-overlay">
-        <button class="close-overlay-btn"><i class="bi bi-x-square-fill"></i></button>
-        <img src="/assets/images/clifton-suspension-bridge-map.jpg" class="map-overlay-img" />
-        <div class="overlay-text">
-          <h1 style="margin-top: 15px; line-height: 100%; font-size: 25px;">Visit Clifton Suspension Bridge:</h1>
-          <p style="margin-top: -5px;">
-            Street: Clifton Rd <br>
-            City: Bristol <br>
-            Country: United Kingdom <br>
-            Postcode: BR6 92K
-          </p>
-        </div>
-      </div>
-      <img class="carousel-img" src="/assets/images/location1.jpg" />
-      <div class="carousel-desc">
-        <a><button class="visit-btn">Visit</button></a>
-        <div class="middle-desc">
-          <h1>Founding of Tomas Graham</h1>
-          <h3>1982</h3>
-          <div class="text-container">
-            <p class="carousel-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel lacinia nibh.
-              Etiam
-              at suscipit magna.
-              Phasellus at efficitur arcu, id accumsan nulla. Donec at nunc consequat, viverra sapien eu, elementum
-              arcu.
-              Maecenas ultrices ipsum sit amet libero dignissim aliquam. Etiam et feugiat urna. Phasellus quis leo sed
-              enim posuere eleifend ac in est. In dictum arcu sem, eget elementum felis consectetur sed.</p>
-          </div>
-          <a><button class="discover-more text-toggle-btn">Discover More</button></a>
-        </div>
-      </div>
-    </div>
-
-    <div class="carousel c3">
-      <div class="map-overlay">
-        <button class="close-overlay-btn"><i class="bi bi-x-square-fill"></i></button>
-        <img src="/assets/images/clifton-suspension-bridge-map.jpg" class="map-overlay-img" />
-        <div class="overlay-text">
-          <h1 style="margin-top: 15px; line-height: 100%; font-size: 25px;">Visit Clifton Suspension Bridge:</h1>
-          <p style="margin-top: -5px;">
-            Street: Clifton Rd <br>
-            City: Bristol <br>
-            Country: United Kingdom <br>
-            Postcode: BR6 92K
-          </p>
-        </div>
-      </div>
-      <img class="carousel-img" src="/assets/images/location1.jpg" />
-      <div class="carousel-desc">
-        <a><button class="visit-btn">Visit</button></a>
-        <div class="middle-desc">
-          <h1>Founding of Lewis Graham</h1>
-          <h3>1979</h3>
-          <div class="text-container">
-            <p class="carousel-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel lacinia nibh.
-              Etiam
-              at suscipit magna.
-              Phasellus at efficitur arcu, id accumsan nulla. Donec at nunc consequat, viverra sapien eu, elementum
-              arcu.
-              Maecenas ultrices ipsum sit amet libero dignissim aliquam. Etiam et feugiat urna. Phasellus quis leo sed
-              enim posuere eleifend ac in est. In dictum arcu sem, eget elementum felis consectetur sed.</p>
-          </div>
-          <a><button class="discover-more text-toggle-btn">Discover More</button></a>
-        </div>
-      </div>
-    </div>
-  </div>
+  </section>
 
   <div style="background: #fff; padding-bottom: 50px;">
     <section class="contact" id="contact">
