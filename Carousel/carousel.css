@@ -28,6 +28,7 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
+  background: linear-gradient(90deg, #e2e2e2, #fedcdc);
 }
 
 nav,
@@ -159,6 +160,7 @@ button {
   align-items: center;
   border-bottom-left-radius: 18px;
   border-bottom-right-radius: 18px;
+  background: #fff;
 }
 
 .visit-btn {
