@@ -22,6 +22,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  background-color: #F2F2F2;
+}
+
 nav,
 nav::before,
 nav::after {
@@ -40,6 +44,7 @@ nav {
   display: grid;
   place-items: center;
   top: 0;
+  position: relative;
   left: 0;
   z-index: 2;
   box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
@@ -62,6 +67,7 @@ nav .nav-container {
   font-weight: 600;
   display: grid;
   place-items: center;
+  color: #F22F2F;
 }
 
 .nav-links {
@@ -106,6 +112,138 @@ nav a {
 
 nav button {
   cursor: pointer;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  background: url("/assets/images/Bristol-landing.avif");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero img {
+  position: relative;
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.3);
+  justify-content: center;
+  margin: 0 200px;
+  padding: 50px 0;
+}
+
+.hero-content h1,
+.hero-content p {
+  color: #fff;
+}
+
+.hero-content h1 {
+  font-size: 80px;
+  font-weight: 700;
+}
+
+.hero-content span {
+  color: #F22F2F;
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 70px;
+}
+
+.hero-content a {
+  color: #333;
+  text-decoration: none;
+}
+
+.hero-content button {
+  border: 2px solid #fff;
+  color: #333;
+  background: #fff;
+  padding: 10px 30px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 5px 10px;
+  cursor: pointer;
+  transition: 0.2s all ease;
+  font-size: 15px;
+}
+
+.hero-content button:hover {
+  background: #F22F2F;
+  color: #fff;
+}
+
+section {
+  padding-top: 80px;
+  margin: 0 10vw;
+  margin-bottom: 100px;
+}
+
+.section-title {
+  text-align: center;
+}
+
+section h2 {
+  font-size: 2rem;
+}
+
+section .card h3 {
+  margin-bottom: 10px;
+}
+
+section .card p {
+  margin: 0 30px;
+}
+
+section .cards {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+section .card {
+  width: calc(100% / 3 - 30px);
+  min-height: 425px;
+  text-align: center;
+  list-style: none;
+  background-color: #fff;
+  padding: 0 0 20px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.04);
+  margin-bottom: 50px;
+}
+
+section .card img {
+  height: 240px;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 20px;
 }
 
 
