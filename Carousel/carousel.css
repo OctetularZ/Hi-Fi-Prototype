@@ -71,6 +71,7 @@ nav .nav-container {
   font-weight: 600;
   display: grid;
   place-items: center;
+  color: #F22F2F;
 }
 
 .nav-links {
@@ -119,6 +120,26 @@ a {
 
 button {
   cursor: pointer;
+}
+
+.heading-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heading-container h1 {
+  font-size: 50px;
+}
+
+.heading-container p {
+  font-size: 16px;
+  margin-top: -20px;
+}
+
+.bristol-span {
+  color: #F22F2F;
 }
 
 .carousel-container {
