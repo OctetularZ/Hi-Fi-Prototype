@@ -9,6 +9,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="index.css">
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
@@ -17,7 +19,8 @@
       <a href="index.html" class="nav-logo">BRISTOL</a>
       <ul class="nav-links">
         <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="/Carousel/carousel.html">Carousel</a></li>
+        <li><a href="/Carousel/carousel.html">History</a></li>
+        <li><a href="#contact">Contact</a></li>
         <li><a href="/Login-Register/login-register.html">Login</a></li>
       </ul>
       <button class="nav-toggle-btn" id="nav-toggle-open"><i class="bi bi-list"></i></button>
@@ -30,95 +33,214 @@
       <div class="hero-content">
         <h1>Welcome to <span>Bristol!</span></h1>
         <p>Plan your weekend trip to Bristol and find out all that Bristol has to offer all on this page.</p>
-        <a href="#"><button>Discover More</button></a>
+        <a href="#discover"><button>Discover More</button></a>
       </div>
     </div>
   </div>
 
-  <section class="discover" id="discover">
-    <div class="discover-container">
-      <div class="section-title">
-        <h2>Discover</h2>
-        <p>See what Bristol has to offer</p>
+  <div style="background-color: #fff;">
+    <section class=" discover" id="discover">
+      <div class="discover-container">
+        <div class="section-title">
+          <h2>Discover</h2>
+          <p>See what Bristol has to offer</p>
+        </div>
+
+        <ul class="cards flex">
+          <li class="card">
+            <img src="/assets/images/Bristol-1.webp" alt="discoverImg" />
+            <h3>Bristol City Centre</h3>
+            <p>Bustling with shops, cafés, street performers, and historic buildings, Bristol’s city centre is the
+              beating
+              heart of the city.</p>
+          </li>
+
+          <li class="card">
+            <img src="/assets/images/Bristol-2.webp" alt="discoverImg" />
+            <h3>Distinctive Local Areas</h3>
+            <p>From the bohemian charm of Stokes Croft to the elegance of Clifton and the vibrant community of
+              Bedminster,
+              Bristol’s neighborhoods each offer a unique vibe.</p>
+          </li>
+
+          <li class="card">
+            <img src="/assets/images/Bristol-3.jpg" alt="discoverImg" />
+            <h3>Clifton Suspension Bridge</h3>
+            <p>Marvel at Brunel's engineering masterpiece spanning the Avon Gorge. A symbol of the city, the bridge
+              offers
+              stunning views and photo ops.</p>
+          </li>
+
+          <li class="card">
+            <img src="/assets/images/Bristol-4.jpg" alt="discoverImg" />
+            <h3>University of Bristol</h3>
+            <p>A world-renowned institution at the heart of the city, the University of Bristol blends academic
+              excellence
+              with historic architecture.</p>
+          </li>
+
+          <li class="card">
+            <img src="/assets/images/Bristol-5.jpg" alt="discoverImg" />
+            <h3>Rich Maritime History</h3>
+            <p>Dive into Bristol’s role in trade, exploration, and innovation. Visit M Shed and the old docks to trace
+              the
+              city’s deep-rooted nautical legacy.</p>
+          </li>
+
+          <li class="card">
+            <img src="/assets/images/Bristol-6.jpg" alt="discoverImg" />
+            <h3>Street Art & Creativity</h3>
+            <p>Home of Banksy and vibrant murals, Bristol’s streets are a canvas of bold expression. Take a walk through
+              Stokes Croft and experience urban creativity.</p>
+          </li>
+        </ul>
       </div>
+    </section>
+  </div>
 
-      <ul class="cards flex">
-        <li class="card">
-          <img src="/assets/images/Bristol-1.webp" alt="discoverImg" />
-          <h3>Discover #1</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel lacinia nibh.
-            Etiam at suscipit magna.</p>
-        </li>
-
-        <li class="card">
-          <img src="/assets/images/Bristol-2.webp" alt="discoverImg" />
-          <h3>Discover #1</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel lacinia nibh.
-            Etiam at suscipit magna.</p>
-        </li>
-
-        <li class="card">
-          <img src="/assets/images/Bristol-3.jpg" alt="discoverImg" />
-          <h3>Discover #1</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel lacinia nibh.
-            Etiam at suscipit magna.</p>
-        </li>
-
-        <li class="card">
-          <img src="/assets/images/Bristol-4.jpg" alt="discoverImg" />
-          <h3>Discover #1</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel lacinia nibh.
-            Etiam at suscipit magna.</p>
-        </li>
-
-        <li class="card">
-          <img src="/assets/images/Bristol-5.jpg" alt="discoverImg" />
-          <h3>Discover #1</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel lacinia nibh.
-            Etiam at suscipit magna.</p>
-        </li>
-
-        <li class="card">
-          <img src="/assets/images/Bristol-6.jpg" alt="discoverImg" />
-          <h3>Discover #1</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel lacinia nibh.
-            Etiam at suscipit magna.</p>
-        </li>
-      </ul>
+  <div class="carousel-container">
+    <div class="carousel c1">
+      <div class="map-overlay">
+        <button class="close-overlay-btn"><i class="bi bi-x-square-fill"></i></button>
+        <img src="/assets/images/clifton-suspension-bridge-map.jpg" class="map-overlay-img" />
+        <div class="overlay-text">
+          <h1 style="margin-top: 15px; line-height: 100%; font-size: 25px;">Visit Clifton Suspension Bridge:</h1>
+          <p style="margin-top: -5px;">
+            Street: Clifton Rd <br>
+            City: Bristol <br>
+            Country: United Kingdom <br>
+            Postcode: BR6 92K
+          </p>
+        </div>
+      </div>
+      <img class="carousel-img" src="/assets/images/location1.jpg" />
+      <div class="carousel-desc">
+        <a><button class="visit-btn">Visit</button></a>
+        <div class="middle-desc">
+          <h1>Founding of Frank Stone</h1>
+          <h3>1963</h3>
+          <div class="text-container">
+            <p class="carousel-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel lacinia nibh.
+              Etiam
+              at suscipit magna.
+              Phasellus at efficitur arcu, id accumsan nulla. Donec at nunc consequat, viverra sapien eu, elementum
+              arcu.
+              Maecenas ultrices ipsum sit amet libero dignissim aliquam. Etiam et feugiat urna. Phasellus quis leo sed
+              enim posuere eleifend ac in est. In dictum arcu sem, eget elementum felis consectetur sed.</p>
+          </div>
+          <a><button class="discover-more text-toggle-btn">Discover More</button></a>
+        </div>
+      </div>
     </div>
-  </section>
 
-  <section class="contact" id="contact">
-    <div class="contact-container">
-      <div class="section-title">
-        <h2>Contact Us</h2>
-        <p>Reach out to our team and we'll respond in less than 48 hours!</p>
+    <div class="carousel c2">
+      <div class="map-overlay">
+        <button class="close-overlay-btn"><i class="bi bi-x-square-fill"></i></button>
+        <img src="/assets/images/clifton-suspension-bridge-map.jpg" class="map-overlay-img" />
+        <div class="overlay-text">
+          <h1 style="margin-top: 15px; line-height: 100%; font-size: 25px;">Visit Clifton Suspension Bridge:</h1>
+          <p style="margin-top: -5px;">
+            Street: Clifton Rd <br>
+            City: Bristol <br>
+            Country: United Kingdom <br>
+            Postcode: BR6 92K
+          </p>
+        </div>
       </div>
+      <img class="carousel-img" src="/assets/images/location1.jpg" />
+      <div class="carousel-desc">
+        <a><button class="visit-btn">Visit</button></a>
+        <div class="middle-desc">
+          <h1>Founding of Tomas Graham</h1>
+          <h3>1982</h3>
+          <div class="text-container">
+            <p class="carousel-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel lacinia nibh.
+              Etiam
+              at suscipit magna.
+              Phasellus at efficitur arcu, id accumsan nulla. Donec at nunc consequat, viverra sapien eu, elementum
+              arcu.
+              Maecenas ultrices ipsum sit amet libero dignissim aliquam. Etiam et feugiat urna. Phasellus quis leo sed
+              enim posuere eleifend ac in est. In dictum arcu sem, eget elementum felis consectetur sed.</p>
+          </div>
+          <a><button class="discover-more text-toggle-btn">Discover More</button></a>
+        </div>
+      </div>
+    </div>
 
-      <div class="row contact-div">
-        <div class="col information">
-          <div class="contact-details">
-            <p><i class="bi bi-geo-alt"></i>124 Bristol St, Foxings Way, Bristol, BR2 ML1</p>
-            <p><i class="bi bi-envelope"></i>info@bristol-city-break.co.uk</p>
-            <p><i class="bi bi-telephone"></i>(+44) 7193738290</p>
-            <p><i class="bi bi-clock"></i>Monday - Friday: 9:00 AM - 8:00 PM</p>
-            <p><i class="bi bi-clock"></i>Saturday: 10:00 AM - 5:00 PM</p>
-            <p><i class="bi bi-clock"></i>Sunday: Closed</p>
-            <p><i class="bi bi-globe"></i>www.bristolcitybreak.co.uk</p>
+    <div class="carousel c3">
+      <div class="map-overlay">
+        <button class="close-overlay-btn"><i class="bi bi-x-square-fill"></i></button>
+        <img src="/assets/images/clifton-suspension-bridge-map.jpg" class="map-overlay-img" />
+        <div class="overlay-text">
+          <h1 style="margin-top: 15px; line-height: 100%; font-size: 25px;">Visit Clifton Suspension Bridge:</h1>
+          <p style="margin-top: -5px;">
+            Street: Clifton Rd <br>
+            City: Bristol <br>
+            Country: United Kingdom <br>
+            Postcode: BR6 92K
+          </p>
+        </div>
+      </div>
+      <img class="carousel-img" src="/assets/images/location1.jpg" />
+      <div class="carousel-desc">
+        <a><button class="visit-btn">Visit</button></a>
+        <div class="middle-desc">
+          <h1>Founding of Lewis Graham</h1>
+          <h3>1979</h3>
+          <div class="text-container">
+            <p class="carousel-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel lacinia nibh.
+              Etiam
+              at suscipit magna.
+              Phasellus at efficitur arcu, id accumsan nulla. Donec at nunc consequat, viverra sapien eu, elementum
+              arcu.
+              Maecenas ultrices ipsum sit amet libero dignissim aliquam. Etiam et feugiat urna. Phasellus quis leo sed
+              enim posuere eleifend ac in est. In dictum arcu sem, eget elementum felis consectetur sed.</p>
+          </div>
+          <a><button class="discover-more text-toggle-btn">Discover More</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background: #fff; padding-bottom: 50px;">
+    <section class="contact" id="contact">
+      <div class="contact-container">
+        <div class="section-title">
+          <h2>Contact Us</h2>
+          <p>Reach out to our team and we'll respond in less than 48 hours!</p>
+        </div>
+
+        <div class="row contact-div">
+          <div class="col information">
+            <div class="contact-details">
+              <p><i class="bi bi-geo-alt"></i>124 Bristol St, Foxings Way, Bristol, BR2 ML1</p>
+              <p><i class="bi bi-envelope"></i>info@bristol-city-break.co.uk</p>
+              <p><i class="bi bi-telephone"></i>(+44) 7193738290</p>
+              <p><i class="bi bi-clock"></i>Monday - Friday: 9:00 AM - 8:00 PM</p>
+              <p><i class="bi bi-clock"></i>Saturday: 10:00 AM - 5:00 PM</p>
+              <p><i class="bi bi-clock"></i>Sunday: Closed</p>
+              <p><i class="bi bi-globe"></i>www.bristolcitybreak.co.uk</p>
+            </div>
+          </div>
+
+          <div class="col form">
+            <form action="#">
+              <input type="text" placeholder="Name*" required>
+              <input type="email" placeholder="Email*" required>
+              <textarea placeholder="Message*" required></textarea>
+              <button type="submit-btn" id="suubmit">Send Message</button>
+            </form>
           </div>
         </div>
-
-        <div class="col form">
-          <form action="#">
-            <input type="text" placeholder="Name*" required>
-            <input type="email" placeholder="Email*" required>
-            <textarea name="Message*" required></textarea>
-            <button type="submit-btn" id="suubmit">Send Message</button>
-          </form>
-        </div>
-
       </div>
-  </section>
+    </section>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <span>Bristol - City of Wonder</span>
+    </div>
+  </footer>
 
   <script src="index.js" async defer></script>
   <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="

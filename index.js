@@ -1,3 +1,10 @@
+// Registering GSAP plugin
+
+gsap.registerPlugin(ScrollTrigger)
+
+const contents = gsap.utils.toArray(".carousel");
+let scrollAnim;
+
 // Navigation menu
 
 const nav = document.querySelector('.nav-links')
@@ -21,3 +28,77 @@ const closeNav = () => {
 }
 
 closeNavBtn.addEventListener('click', closeNav)
+
+
+// Map overlay
+
+const mapOverlays = document.querySelectorAll('.map-overlay');
+const visitBtns = document.querySelectorAll('.visit-btn');
+const closeOverlayBtns = document.querySelectorAll('.close-overlay-btn');
+
+visitBtns.forEach((btn, index) => {
+  btn.addEventListener('click', () => {
+    const overlay = mapOverlays[index];
+    overlay.style.opacity = '1';
+    overlay.style.pointerEvents = 'auto';
+  });
+});
+
+closeOverlayBtns.forEach((btn, index) => {
+  btn.addEventListener('click', () => {
+    const overlay = mapOverlays[index];
+    overlay.style.opacity = '0';
+    overlay.style.pointerEvents = 'none';
+  });
+});
+
+
+// Media queries
+
+const tabletScreen = window.matchMedia("(max-width: 850px)");
+
+function tablet(x) {
+  carouselContainter = document.querySelector('.carousel-container')
+  if (!x.matches) {
+    if (!scrollAnim) {
+      scrollAnim = gsap.to(contents, {
+        xPercent: -140 * (contents.length - 1),
+        scrollTrigger: {
+          trigger: ".carousel-container",
+          pin: true,
+          scrub: 1
+        }
+      });
+    }
+  } else {
+    if (scrollAnim) {
+      scrollAnim.scrollTrigger.kill(); // kill ScrollTrigger
+      scrollAnim.kill(); // kill GSAP animation
+      scrollAnim = null; // reset the reference
+      gsap.set(contents, {
+        clearProps: "all"
+      }); // remove inline styles
+    }
+  }
+}
+
+tablet(tabletScreen);
+
+tabletScreen.addEventListener("change", tablet);
+
+
+// Making carousel discover more scrollable div feature
+
+const carousels = document.querySelectorAll('.carousel');
+
+carousels.forEach(carousel => {
+  const carouselText = carousel.querySelector('.carousel-text');
+  const toggleBtn = carousel.querySelector('.text-toggle-btn');
+
+  toggleBtn.addEventListener('click', () => {
+    carouselText.classList.toggle('expanded');
+    toggleBtn.textContent = carouselText.classList.contains('expanded') ?
+      "Show Less" :
+      "Discover More";
+  });
+});
