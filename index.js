@@ -21,3 +21,17 @@ const closeNav = () => {
 }
 
 closeNavBtn.addEventListener('click', closeNav)
+
+// For windows resizing
+
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 1024) {
+    nav.style.display = 'flex';
+    openNavBtn.style.display = 'none';
+    closeNavBtn.style.display = 'none';
+  } else {
+    nav.style.display = 'none';
+    openNavBtn.style.display = 'inline-block';
+    closeNavBtn.style.display = 'none';
+  }
+});

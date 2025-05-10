@@ -127,6 +127,9 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 20px;
 }
 
 .heading-container h1 {
@@ -455,12 +458,20 @@ button {
     width: 275px;
     height: 375px;
   }
+
+  .heading-container h1 {
+    font-size: 45px;
+  }
 }
 
 @media screen and (max-width: 360px) {
   .carousel {
     max-width: 18rem;
     min-width: 18rem;
+  }
+
+  .heading-container h1 {
+    font-size: 40px;
   }
 
   .map-overlay {
