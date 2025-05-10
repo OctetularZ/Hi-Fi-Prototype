@@ -45,27 +45,28 @@ window.addEventListener('resize', () => {
 });
 
 
-// Map overlay
+// Map Overlay
 
-const mapOverlays = document.querySelectorAll('.map-overlay');
-const visitBtns = document.querySelectorAll('.visit-btn');
-const closeOverlayBtns = document.querySelectorAll('.close-overlay-btn');
-
-visitBtns.forEach((btn, index) => {
+document.querySelectorAll('.visit-btn').forEach((btn) => {
   btn.addEventListener('click', () => {
-    const overlay = mapOverlays[index];
-    overlay.style.opacity = '1';
-    overlay.style.pointerEvents = 'auto';
+    const overlay = btn.closest('.carousel')?.querySelector('.map-overlay');
+    if (overlay) {
+      overlay.style.opacity = '1';
+      overlay.style.pointerEvents = 'auto';
+    }
   });
 });
 
-closeOverlayBtns.forEach((btn, index) => {
+document.querySelectorAll('.close-overlay-btn').forEach((btn) => {
   btn.addEventListener('click', () => {
-    const overlay = mapOverlays[index];
-    overlay.style.opacity = '0';
-    overlay.style.pointerEvents = 'none';
+    const overlay = btn.closest('.carousel')?.querySelector('.map-overlay');
+    if (overlay) {
+      overlay.style.opacity = '0';
+      overlay.style.pointerEvents = 'none';
+    }
   });
 });
+
 
 
 // Media queries
