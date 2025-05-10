@@ -461,7 +461,6 @@ button {
 
   .map-overlay {
     width: 275px;
-    height: 375px;
   }
 
   .heading-container h1 {
@@ -481,6 +480,5 @@ button {
 
   .map-overlay {
     width: 250px;
-    height: 350px;
   }
 }
