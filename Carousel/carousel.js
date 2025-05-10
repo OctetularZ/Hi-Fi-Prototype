@@ -117,12 +117,3 @@ carousels.forEach(carousel => {
       "Discover More";
   });
 });
-
-
-
-
-
-
-
-
-// Done.Just need to change visit feature in carousel. As you can 't visit every location.
